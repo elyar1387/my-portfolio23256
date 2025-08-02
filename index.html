@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>رزومه دانشجویی</title>
+  <!-- فونت فارسی -->
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
+  <!-- آیکون‌ها -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: "Vazir", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff7f3; /* پس زمینه روشن و گرم */
+      color: #4a2a19; /* قهوه‌ای تیره */
+      direction: rtl;
+    }
+    header {
+      background: linear-gradient(135deg, #ff6f61, #d84315); /* همان گرادیان نارنجی-قرمز */
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      box-shadow: 0 4px 15px rgba(216, 67, 21, 0.4);
+      border-radius: 0 0 30px 30px; /* گوشه‌های ملایم */
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      filter: drop-shadow(0 0 10px rgba(255, 111, 97, 0.7));
+      transition: transform 0.3s ease, filter 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+      background: white;
+    }
+    header img:hover {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 0 20px rgba(255, 111, 97, 1));
+      box-shadow: 0 0 25px rgba(216, 67, 21, 1);
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffccbc;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff0e6; /* زمینه روشن ملایم برای بخش ها */
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(216, 67, 21, 0.15);
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #d84315;
+      border-bottom: 3px solid #ff6f61;
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+    /* بخش مهارت‌ها */
+    .skills {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skills a {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #ff6f61, #d84315);
+      color: white;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.7);
+      text-decoration: none;
+      font-size: 22px;
+      transition: background 0.4s ease, transform 0.3s ease;
+      user-select: none;
+      font-family: inherit;
+      text-align: center;
+      cursor: pointer;
+    }
+    .skills a:hover {
+      background: linear-gradient(135deg, #d84315, #ff6f61);
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(216, 67, 21, 0.8);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 16px rgba(216, 67, 21, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 30px rgba(216, 67, 21, 0.35);
+    }
+    form {
+      display: grid;
+      gap: 18px;
+    }
+    input,
+    textarea {
+      padding: 15px;
+      border: 2px solid #ff6f61;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 16px;
+      color: #4a2a19;
+      transition: border-color 0.3s;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: #d84315;
+      outline: none;
+      box-shadow: 0 0 8px rgba(216, 67, 21, 0.6);
+    }
+    button {
+      background: linear-gradient(135deg, #ff6f61, #d84315);
+      color: white;
+      padding: 15px 0;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.7);
+      transition: background 0.4s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #d84315, #ff6f61);
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(216, 67, 21, 0.9);
+    }
+    footer {
+      text-align: center;
+      background: linear-gradient(135deg, #d84315, #ff6f61);
+      color: white;
+      padding: 25px 20px;
+      box-shadow: 0 -4px 15px rgba(216, 67, 21, 0.4);
+      font-weight: 600;
+    }
+    footer .social {
+      margin: 15px 0;
+    }
+    footer .social a {
+      color: white;
+      margin: 0 12px;
+      font-size: 22px;
+      transition: color 0.3s;
+    }
+    footer .social a:hover {
+      color: #fff3e0;
+    }
+    .contact-info {
+      margin-bottom: 25px;
+    }
+    .contact-info p {
+      font-size: 17px;
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #6d3c23;
+    }
+    .contact-info i {
+      color: #d84315;
+      font-size: 20px;
+    }
+    /* دکمه چرا باید من را انتخاب کنید؟ */
+    .choose-me-btn {
+      display: inline-block;
+      margin: 30px auto 40px auto;
+      padding: 18px 48px;
+      background: linear-gradient(135deg, #ff6f61, #d84315);
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6);
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.4s ease, transform 0.3s ease;
+      border: none;
+      user-select: none;
+      display: block;
+      max-width: 320px;
+      font-family: inherit;
+    }
+    .choose-me-btn:hover {
+      background: linear-gradient(135deg, #d84315, #ff6f61);
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(216, 67, 21, 0.8);
+    }
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+      header {
+        padding: 30px 15px;
+      }
+      header img {
+        width: 90px;
+        height: 90px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+      }
+      section {
+        padding: 30px 15px;
+      }
+      button, .choose-me-btn, .skills a {
+        font-size: 18px;
+        padding: 14px 35px;
+        max-width: 100%;
+      }
+    }
+
+    /* اصلاح شده برای بخش درباره من */
+    #about {
+      margin-top: 70px;       /* فاصله از هدر */
+      padding: 40px 20px;     /* فاصله متن داخل کادر */
+      background: #fff0e6;    /* رنگ پس‌زمینه کادر */
+      border-radius: 15px;    /* گوشه‌های گرد */
+      box-shadow: 0 4px 12px rgba(216, 67, 21, 0.15); /* سایه کادر */
+      margin-bottom: 80px;    /* فاصله از پایین */
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/mnt/data/e871303b-ebda-4a1e-8379-f84e1a6b5cfc.png" alt="Profile" />
+    <h1>الیار آتشی</h1>
+    <p>نمونه کار طراحی رزومه </p>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>درباره من</h2>
+    <p>
+      من الیار آتشی هستم، یک طراح وب پرانرژی و خلاق که با اشتیاق به دنبال خلق تجربه‌های کاربری حرفه‌ای و زیباست.
+      هدفم این است که با ترکیب مهارت‌های فنی و ایده‌های نو، وبسایت‌هایی بسازم که نه تنها کاربردی باشند،
+      بلکه ظاهری جذاب و مدرن هم داشته باشند.
+      همواره به یادگیری تکنولوژی‌های جدید علاقه‌مندم و باور دارم طراحی وب فقط یک کار نیست،
+      بلکه یک هنر است که می‌تواند زندگی دیجیتال را راحت‌تر و زیباتر کند.
+    </p>
+    <a href="resume.html"><button>مشاهده رزومه</button></a>
+    <button
+      class="choose-me-btn"
+      onclick="window.location.href='why-me.html'"
+    >
+      چرا باید من را انتخاب کنید؟
+    </button>
+  </section>
+
+  <section id="skills">
+    <h2>مهارت‌ها</h2>
+    <div class="skills">
+      <a href="css.html">CSS</a>
+
+      <a href="html.html">HTML</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>پروژه‌ها</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>طراحی</h3>
+        <p>طراحی سایت برای دانشجو، دانش‌آموز و معلمان برای رزومه یا سایت درسی</p>
+        <a href="#">مشاهده پروژه</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تماس با من</h2>
+    <div class="contact-info">
+      <p><i class="fa fa-phone"></i> 09337610239</p>
+      <p><i class="fa fa-envelope"></i> alyaratshy34@gmail.com</p>
+      <p><i class="fa fa-map-marker-alt"></i> اذربایجان شرقی . تبریز</p>
+    </div>
+    <form action="https://formspree.io/f/manbdokl" method="POST">
+      <input type="text" name="name" placeholder="نام شما" required />
+      <input type="email" name="email" placeholder="ایمیل شما" required />
+      <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ساخته شده توسط آتشی</p>
+    <div class="social">
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
