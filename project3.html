@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سایت آموزشی رایگان (نمونه اولیه)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: "Vazir", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      direction: rtl;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(#f4511e);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #f4511e
+      margin-bottom: 20px;
+      border-bottom: 3px solid #f4511e
+      padding-bottom: 10px;
+    }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .course {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .course:hover {
+      transform: translateY(-7px);
+    }
+    .course img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .course-content {
+      padding: 20px;
+    }
+    .course-content h3 {
+      margin: 0 0 10px;
+      color: #f4511e;
+    }
+    .course-content p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .course-content a {
+      display: inline-block;
+      background: linear-gradient(#f4511e);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .course-content a:hover {
+      background: linear-gradient(#f4511e);
+      transform: scale(1.05);
+    }
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-btn a {
+      display: inline-block;
+      background: #f4511e;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(255, 87, 34, 0.5);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .back-btn a:hover {
+      background: #f4511e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>سایت آموزشی رایگان</h1>
+    <p>یادگیری مهارت‌های جدید با دوره‌های رایگان آنلاین</p>
+  </header>
+
+  <section>
+    <h2>دوره‌های آموزشی</h2>
+    <div class="courses">
+      <div class="course">
+        <img src="https://picsum.photos/id/1015/400/250" alt="دوره HTML">
+        <div class="course-content">
+          <h3>آموزش HTML</h3>
+          <p>شروع طراحی وب از پایه با آموزش کامل HTML.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/id/1011/400/250" alt="دوره CSS">
+        <div class="course-content">
+          <h3>آموزش CSS</h3>
+          <p>زیباسازی صفحات وب با استایل‌ها و افکت‌های جذاب.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/id/1016/400/250" alt="دوره JavaScript">
+        <div class="course-content">
+          <h3>آموزش JavaScript</h3>
+          <p>افزودن تعامل و پویا‌سازی صفحات وب با جاوااسکریپت.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/id/1021/400/250" alt="دوره وردپرس">
+        <div class="course-content">
+          <h3>آموزش وردپرس</h3>
+          <p>ساخت وبسایت حرفه‌ای بدون کدنویسی با وردپرس.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/id/1022/400/250" alt="دوره طراحی گرافیک">
+        <div class="course-content">
+          <h3>طراحی گرافیک</h3>
+          <p>اصول طراحی و کار با ابزارهای گرافیکی محبوب.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+      <div class="course">
+        <img src="https://picsum.photos/id/1024/400/250" alt="دوره SEO">
+        <div class="course-content">
+          <h3>آموزش سئو</h3>
+          <p>بهینه‌سازی سایت برای موتورهای جستجو و افزایش بازدید.</p>
+          <a href="#">مشاهده جزئیات</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="back-btn">
+          <a href="file:///C:/Users/WIn10/Desktop/html/projects.html">بازگشت به قسمت پروژه ها</a>
+    </div>
+  </section>
+</body>
+</html>
